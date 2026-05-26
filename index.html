@@ -6,15 +6,19 @@
     <title>School Letter Helper | 学校プリントを、やることリストに変える</title>
     <meta
       name="description"
-      content="School Letter Helperは、難しい学校連絡をやさしい日本語、母語訳、締切、返信文に整理する保護者向けサポートアプリです。"
+      content="School Letter Helperは、学校プリントや連絡文をやさしい日本語、母語訳、締切、持ち物、返信文に整理する外国人保護者向けサポートアプリです。"
     />
-    <meta property="og:title" content="School Letter Helper" />
+    <meta property="og:site_name" content="School Letter Helper" />
+    <meta property="og:title" content="School Letter Helper | 学校プリントを、やることリストに変える" />
     <meta
       property="og:description"
-      content="学校プリントを、やることリストに変える。保護者向け学校連絡サポートアプリ。"
+      content="難しい学校連絡を、やさしい日本語・母語訳・締切・返信文に整理する保護者向けサポートアプリ。"
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#1f6f63" />
+    <meta property="og:url" content="https://school-letter-helper.pages.dev/" />
+    <meta property="og:image" content="https://school-letter-helper.pages.dev/ogp.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#166b72" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -24,72 +28,75 @@
         <span>School Letter Helper</span>
       </a>
       <nav class="site-nav" aria-label="メインナビゲーション">
-        <a href="#about">説明</a>
+        <a href="#problems">困りごと</a>
         <a href="#features">できること</a>
-        <a href="#signup">事前登録</a>
+        <a href="#signup">テスト版</a>
         <a href="privacy.html">プライバシー</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero section-band">
+      <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">保護者向け学校連絡サポートアプリ</p>
+          <p class="eyebrow">外国人保護者と支援者のための学校連絡サポート</p>
           <h1>学校プリントを、やることリストに変える。</h1>
           <p class="lead">
-            難しい学校連絡を、やさしい日本語・母語訳・締切・返信文に整理する
-            保護者向けサポートアプリです。
+            School Letter Helperは、難しい学校連絡をやさしい日本語・母語訳・締切・持ち物・返信文に整理する保護者向けサポートアプリです。
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#signup">テスト版に参加する</a>
             <a class="button button-secondary" href="#signup">リリース通知を受け取る</a>
           </div>
+          <p class="privacy-note">
+            テスト版では、子どもの氏名・学校名・住所などの入力は推奨しません。
+          </p>
         </div>
-        <div class="hero-panel" aria-label="アプリで整理される内容の例">
-          <div class="paper-preview">
-            <span class="paper-label">学校からのお知らせ</span>
-            <strong>6月12日までに提出</strong>
-            <p>持ち物、締切、返信が必要な内容を自動で整理します。</p>
+
+        <div class="hero-card" aria-label="アプリ画面のイメージ">
+          <div class="document-card">
+            <span class="tag">学校からのお知らせ</span>
+            <h2>6月12日までに提出</h2>
+            <p>遠足の参加確認。持ち物は水筒、帽子、雨具。</p>
           </div>
           <ul class="task-list">
-            <li><span></span>締切を確認</li>
-            <li><span></span>必要な持ち物を整理</li>
-            <li><span></span>返信文のたたき台を作成</li>
+            <li><span></span>締切を確認する</li>
+            <li><span></span>持ち物を準備する</li>
+            <li><span></span>先生への返信文を作る</li>
           </ul>
         </div>
       </section>
 
-      <section id="about" class="section">
+      <section id="problems" class="section">
         <div class="section-heading">
           <p class="eyebrow">困りごと</p>
-          <h2>学校連絡は、読むだけでも負担になることがあります。</h2>
+          <h2>学校の連絡は、読むだけでも負担になることがあります。</h2>
         </div>
-        <div class="problem-grid">
-          <article>
+        <div class="card-grid">
+          <article class="info-card">
             <h3>日本語が難しい</h3>
-            <p>学校特有の言い回しや長い文章を、短くわかりやすく整理します。</p>
+            <p>学校特有の言い回し、長い文章、配布物のルールがわかりにくい。</p>
           </article>
-          <article>
+          <article class="info-card">
             <h3>締切を見落としやすい</h3>
-            <p>提出日、持ち物、支払い、返信が必要な内容を抜き出します。</p>
+            <p>提出日、支払い、持ち物、返信が必要な内容が文章の中に埋もれている。</p>
           </article>
-          <article>
+          <article class="info-card">
             <h3>返信の書き方に迷う</h3>
-            <p>欠席連絡、確認、相談などの返信文を作る手助けをします。</p>
+            <p>先生に失礼なく、短く、正確に伝える日本語を考えるのが難しい。</p>
           </article>
         </div>
       </section>
 
-      <section id="features" class="section section-muted">
+      <section id="features" class="section section-tint">
         <div class="section-heading">
           <p class="eyebrow">できること</p>
-          <h2>プリントの内容を、次の行動に変換します。</h2>
+          <h2>プリントの内容を、次の行動に整理します。</h2>
         </div>
         <div class="feature-list">
           <div class="feature-row">
             <span>01</span>
             <div>
-              <h3>やさしい日本語に要約</h3>
+              <h3>やさしい日本語で要約</h3>
               <p>重要な内容を短く整理し、何をすればよいかを見つけやすくします。</p>
             </div>
           </div>
@@ -97,70 +104,161 @@
             <span>02</span>
             <div>
               <h3>母語訳で確認</h3>
-              <p>日本語だけでは不安な保護者が、内容を母語で確認できるようにします。</p>
+              <p>日本語だけでは不安な保護者が、内容を母語でも確認できるようにします。</p>
             </div>
           </div>
           <div class="feature-row">
             <span>03</span>
             <div>
-              <h3>締切・持ち物・返信を抽出</h3>
-              <p>見落としやすい日付、準備物、提出物、連絡事項を一覧にします。</p>
+              <h3>締切・持ち物・提出物を抽出</h3>
+              <p>日付、準備物、支払い、返信が必要な内容をやることリストにします。</p>
             </div>
           </div>
           <div class="feature-row">
             <span>04</span>
             <div>
               <h3>返信文の下書き</h3>
-              <p>先生に送る文章を、丁寧で自然な日本語に整えます。</p>
+              <p>欠席、確認、相談、参加連絡などの返信文を自然な日本語で作ります。</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section id="how" class="section">
         <div class="section-heading">
           <p class="eyebrow">使い方</p>
-          <h2>スマートフォンで学校プリントを撮るだけ。</h2>
+          <h2>スマートフォンで学校プリントを読み込むだけ。</h2>
         </div>
         <ol class="steps">
           <li>
             <strong>プリントを撮影</strong>
-            <span>学校から届いた紙やPDFを読み込みます。</span>
+            <span>紙のプリントやPDFを読み込みます。</span>
           </li>
           <li>
-            <strong>内容を整理</strong>
-            <span>要約、翻訳、締切、返信が必要な項目を確認します。</span>
+            <strong>内容を確認</strong>
+            <span>要約、翻訳、締切、持ち物、返信が必要な項目を確認します。</span>
           </li>
           <li>
-            <strong>必要な行動を実行</strong>
+            <strong>行動に移す</strong>
             <span>提出、準備、返信を忘れないように進めます。</span>
           </li>
         </ol>
       </section>
 
-      <section id="signup" class="section cta-section">
-        <div>
+      <section id="users" class="section section-tint">
+        <div class="section-heading">
+          <p class="eyebrow">対象ユーザー</p>
+          <h2>家庭と学校をつなぐ人のために作っています。</h2>
+        </div>
+        <div class="audience-grid">
+          <div>
+            <strong>外国人保護者</strong>
+            <p>学校連絡を母語でも確認し、必要な対応を把握したい方。</p>
+          </div>
+          <div>
+            <strong>支援者・通訳者</strong>
+            <p>複数家庭の学校連絡支援を、わかりやすく効率化したい方。</p>
+          </div>
+          <div>
+            <strong>学校・NPO関係者</strong>
+            <p>保護者への説明や連絡支援の負担を減らしたい方。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="signup" class="section signup-section">
+        <div class="signup-copy">
           <p class="eyebrow">テスト版募集</p>
           <h2>テスト版の案内を受け取る</h2>
           <p>
-            現在、保護者・支援者・先生・NPO関係者の方から事前登録を受け付けています。
-            学校名、子どもの名前、住所などの入力は不要です。
+            現在、保護者、支援者、先生、NPO関係者の方から事前登録を受け付けています。
+            フォームはGoogle Formsを利用する想定です。
           </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              テスト版に参加する
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              リリース通知を受け取る
+            </a>
+          </div>
         </div>
-        <a
-          class="button button-primary button-large"
-          href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          事前登録フォームを開く
-        </a>
+      </section>
+
+      <section id="privacy" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">個人情報への配慮</p>
+          <h2>最初から、集めすぎない設計を大切にします。</h2>
+        </div>
+        <div class="privacy-box">
+          <p>
+            テスト版の登録フォームでは、名前は任意とし、メールアドレス、立場、使いたい言語、困っていることなど、案内と改善に必要な範囲だけを聞く想定です。
+          </p>
+          <ul>
+            <li>子どもの氏名、学校名、住所などの入力は推奨しません。</li>
+            <li>学校プリント画像を保存する場合は、事前に保存有無と目的を明示します。</li>
+            <li>取得した情報を第三者に販売しません。</li>
+            <li>削除依頼に対応します。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-tint">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>よくある質問</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>どの言語に対応する予定ですか？</summary>
+            <p>最初はニーズの多い言語から検証します。事前登録フォームで使いたい言語を教えてください。</p>
+          </details>
+          <details>
+            <summary>学校名や子どもの名前を入力する必要はありますか？</summary>
+            <p>ありません。テスト版では、子どもの氏名、学校名、住所などの入力を推奨しません。</p>
+          </details>
+          <details>
+            <summary>支援者や先生も登録できますか？</summary>
+            <p>登録できます。保護者支援、学校連絡、NPO活動での利用を想定しています。</p>
+          </details>
+          <details>
+            <summary>正式リリース日は決まっていますか？</summary>
+            <p>未定です。テスト版の参加者からのフィードバックをもとに改善しながら公開準備を進めます。</p>
+          </details>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>School Letter Helper</span>
-      <a href="privacy.html">プライバシーポリシー</a>
+      <div>
+        <strong>School Letter Helper</strong>
+        <p>学校プリントを、やることリストに変える。</p>
+      </div>
+      <nav aria-label="フッターナビゲーション">
+        <a href="#signup">テスト版募集</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+      </nav>
     </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const target = document.querySelector(link.getAttribute("href"));
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
   </body>
 </html>
