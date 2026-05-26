@@ -2,6 +2,10 @@
 
 Cloudflare Pagesでそのまま公開できる、HTML/CSS/JavaScriptのみの静的LPです。
 
+## 公開URL
+
+https://school-letter-helper-lp.pages.dev/
+
 ## 構成
 
 - `index.html`: 日本語LP
