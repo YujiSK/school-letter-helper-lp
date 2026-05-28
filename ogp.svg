@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">School Letter Helper OGP image</title>
+  <desc id="desc">School Letter Helper turns school letters into easy-to-understand action lists.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8fbf7" />
+      <stop offset="48%" stop-color="#f6fbff" />
+      <stop offset="100%" stop-color="#d9f2ff" />
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f4fbfb" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#0f3f46" flood-opacity="0.16" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1040" cy="98" r="160" fill="#b8ede3" opacity="0.45" />
+  <circle cx="126" cy="548" r="210" fill="#ccecff" opacity="0.55" />
+  <circle cx="970" cy="545" r="92" fill="#ffe7a8" opacity="0.52" />
+
+  <g transform="translate(80 72)">
+    <rect x="0" y="0" width="1040" height="486" rx="42" fill="url(#card)" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1040" height="486" rx="42" fill="none" stroke="#d6eeee" stroke-width="2" />
+
+    <g transform="translate(58 54)">
+      <rect x="0" y="0" width="82" height="82" rx="24" fill="#166b72" />
+      <text x="41" y="52" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">SL</text>
+      <text x="106" y="34" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#113b43">School Letter Helper</text>
+      <text x="106" y="68" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600" fill="#477178">外国人保護者と支援者のための学校連絡サポート</text>
+    </g>
+
+    <g transform="translate(58 176)">
+      <text x="0" y="0" font-family="Inter, 'Noto Sans JP', 'Hiragino Sans', Arial, sans-serif" font-size="58" font-weight="900" fill="#0f3036">学校プリントを、</text>
+      <text x="0" y="76" font-family="Inter, 'Noto Sans JP', 'Hiragino Sans', Arial, sans-serif" font-size="58" font-weight="900" fill="#0f3036">やることリストに変える。</text>
+      <text x="0" y="136" font-family="Inter, 'Noto Sans JP', 'Hiragino Sans', Arial, sans-serif" font-size="25" font-weight="600" fill="#3f666d">やさしい日本語・母語訳・締切・持ち物・返信文に整理</text>
+    </g>
+
+    <g transform="translate(678 142)">
+      <rect x="0" y="0" width="294" height="272" rx="30" fill="#ffffff" stroke="#d6eeee" stroke-width="2" />
+      <rect x="26" y="28" width="148" height="28" rx="14" fill="#e6f7f4" />
+      <text x="41" y="49" font-family="Inter, 'Noto Sans JP', Arial, sans-serif" font-size="14" font-weight="800" fill="#166b72">学校からのお知らせ</text>
+      <text x="26" y="96" font-family="Inter, 'Noto Sans JP', Arial, sans-serif" font-size="26" font-weight="900" fill="#113b43">6月12日まで</text>
+      <text x="26" y="130" font-family="Inter, 'Noto Sans JP', Arial, sans-serif" font-size="20" font-weight="700" fill="#406b72">遠足の参加確認</text>
+
+      <g transform="translate(26 166)">
+        <circle cx="11" cy="11" r="11" fill="#166b72" />
+        <path d="M6 11.5l3.3 3.6L16.5 7" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="32" y="17" font-family="Inter, 'Noto Sans JP', Arial, sans-serif" font-size="18" font-weight="700" fill="#254f56">締切を確認</text>
+      </g>
+      <g transform="translate(26 206)">
+        <circle cx="11" cy="11" r="11" fill="#1f9a8a" />
+        <path d="M6 11.5l3.3 3.6L16.5 7" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="32" y="17" font-family="Inter, 'Noto Sans JP', Arial, sans-serif" font-size="18" font-weight="700" fill="#254f56">持ち物を準備</text>
+      </g>
+    </g>
+
+    <g transform="translate(58 420)">
+      <rect x="0" y="0" width="216" height="40" rx="20" fill="#166b72" />
+      <text x="108" y="26" text-anchor="middle" font-family="Inter, 'Noto Sans JP', Arial, sans-serif" font-size="16" font-weight="800" fill="#ffffff">テスト版 事前登録受付中</text>
+    </g>
+  </g>
+</svg>
