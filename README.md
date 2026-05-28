@@ -24,7 +24,7 @@ https://school-letter-helper-lp.pages.dev/sitemap.xml
 SNSやメッセージアプリで共有したときの表示用に、OGP画像を追加しています。
 
 ```text
-https://school-letter-helper-lp.pages.dev/ogp.svg
+https://school-letter-helper-lp.pages.dev/ogp.png
 ```
 
 `index.html` では以下を設定しています。
@@ -36,14 +36,15 @@ https://school-letter-helper-lp.pages.dev/ogp.svg
 - `twitter:image`
 - `twitter:card`
 
-現在は編集しやすいSVG形式です。SNS側のプレビュー互換性をより重視する場合は、同じデザインを `ogp.png` に変換し、`index.html` の `og:image` と `twitter:image` を `https://school-letter-helper-lp.pages.dev/ogp.png` に変更してください。
+編集しやすい元データとして `ogp.svg` も残しています。SNS側のプレビュー互換性を重視するため、公開用メタタグはPNGを参照します。
 
 ## 構成
 
 - `index.html`: 日本語LP、事前登録フォーム、SEO/OGP meta
 - `style.css`: レスポンシブ対応のスタイル
 - `privacy.html`: 簡易プライバシーポリシー
-- `ogp.svg`: OGP共有画像
+- `ogp.png`: OGP共有画像
+- `ogp.svg`: OGP共有画像の編集用SVG
 - `sitemap.xml`: 検索エンジン向けサイトマップ
 - `robots.txt`: クロール許可とサイトマップURL
 - `README.md`: デプロイ手順、フォーム仕様
@@ -53,7 +54,7 @@ https://school-letter-helper-lp.pages.dev/ogp.svg
 - `index.html`
   - `FORMSPREE_ENDPOINT_HERE`
   - `https://school-letter-helper-lp.pages.dev/`
-  - `https://school-letter-helper-lp.pages.dev/ogp.svg`
+  - `https://school-letter-helper-lp.pages.dev/ogp.png`
 - `privacy.html`
   - `REPLACE_WITH_YOUR_EMAIL`
   - `https://school-letter-helper-lp.pages.dev/privacy.html`
