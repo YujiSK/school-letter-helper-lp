@@ -870,3 +870,10 @@ h3 {
   display: inline; /* Disable phrase wrapping control for English and Portuguese */
 }
 
+:lang(en) body,
+:lang(pt) body,
+:lang(pt-BR) body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
