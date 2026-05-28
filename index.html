@@ -24,6 +24,12 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://school-letter-helper-lp.pages.dev/ogp.png" />
     <meta name="theme-color" content="#166b72" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Outfit:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -57,17 +63,35 @@
           </p>
         </div>
 
-        <div class="hero-card" aria-label="アプリ画面のイメージ">
-          <div class="document-card">
-            <span class="tag">学校からのお知らせ</span>
-            <h2>6月12日までに提出</h2>
-            <p>遠足の参加確認。持ち物は水筒、帽子、雨具。</p>
+        <div class="hero-card" aria-label="学校プリントをアプリで整理するイメージ">
+          <div class="phone-mockup">
+            <div class="phone-status" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="scan-card">
+              <span class="tag">読み取り中</span>
+              <h2>遠足のお知らせ</h2>
+              <p>6月12日までに提出。持ち物は水筒、帽子、雨具。</p>
+              <div class="scan-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="transform-arrow" aria-hidden="true">↓</div>
+            <div class="todo-panel">
+              <div class="panel-title">
+                <span>やること</span>
+                <strong>3件</strong>
+              </div>
+              <ul class="task-list">
+                <li><span></span>締切を確認する</li>
+                <li><span></span>持ち物を準備する</li>
+                <li><span></span>先生への返信文を作る</li>
+              </ul>
+            </div>
           </div>
-          <ul class="task-list">
-            <li><span></span>締切を確認する</li>
-            <li><span></span>持ち物を準備する</li>
-            <li><span></span>先生への返信文を作る</li>
-          </ul>
         </div>
       </section>
 
@@ -191,7 +215,7 @@
           <p class="eyebrow">事前登録フォーム</p>
           <h2>テスト版・リリース通知に登録する</h2>
           <p>
-            送信先は初期検証用にFormspreeを想定しています。後で自前APIへ移行しやすいよう、項目名と選択値は固定しています。
+            1分ほどで登録できます。いただいた内容は、テスト版の案内、リリース通知、必要な機能の確認にだけ使います。
           </p>
         </div>
 
@@ -202,7 +226,7 @@
           <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
 
           <div class="form-alert">
-            <strong>個人情報を入力しすぎないでください。</strong>
+            <strong>入力する情報は最小限で大丈夫です。</strong>
             <p>
               子どもの氏名、学校名、住所、電話番号、クラス名、出席番号は入力しないでください。
               学校プリント画像や個人情報を直接送るフォームではありません。
