@@ -819,3 +819,54 @@ h3 {
     justify-self: start;
   }
 }
+
+/* Header Right & Language Switcher */
+.header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.lang-switcher a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.lang-switcher a:hover {
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+}
+
+.lang-switcher a.active {
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 4px 12px rgba(22, 107, 114, 0.24);
+}
+
+@media (min-width: 720px) {
+  .header-right {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+  }
+}
+
+/* Multilingual spacing & layout adjustments */
+:lang(en) .phrase,
+:lang(pt) .phrase {
+  display: inline; /* Disable phrase wrapping control for English and Portuguese */
+}
+
