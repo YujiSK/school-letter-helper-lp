@@ -6,11 +6,26 @@ Cloudflare Pagesでそのまま公開できる、HTML/CSS/JavaScriptのみの静
 
 https://school-letter-helper-lp.pages.dev/
 
+## SEO初期設定
+
+検索エンジン向けに以下のファイルを追加しています。
+
+- `sitemap.xml`
+- `robots.txt`
+
+Google Search Consoleに登録する場合は、サイトマップURLとして次を送信してください。
+
+```text
+https://school-letter-helper-lp.pages.dev/sitemap.xml
+```
+
 ## 構成
 
 - `index.html`: 日本語LP、事前登録フォーム
 - `style.css`: レスポンシブ対応のスタイル
 - `privacy.html`: 簡易プライバシーポリシー
+- `sitemap.xml`: 検索エンジン向けサイトマップ
+- `robots.txt`: クロール許可とサイトマップURL
 - `README.md`: デプロイ手順、フォーム仕様
 
 ## 公開前に差し替える項目
