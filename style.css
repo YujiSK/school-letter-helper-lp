@@ -499,3 +499,158 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+.form-section {
+  background: var(--surface);
+}
+
+.lead-form {
+  display: grid;
+  gap: 18px;
+  max-width: 920px;
+  padding: clamp(18px, 4vw, 30px);
+  background: #f8fcfc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.form-alert {
+  padding: 16px;
+  background: #fff8e8;
+  border: 1px solid #f3d69b;
+  border-radius: 8px;
+}
+
+.form-alert strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-alert p {
+  margin-bottom: 8px;
+  color: #5f5234;
+}
+
+.form-alert a {
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span,
+.field-group legend {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.field em,
+.field-group em {
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #bfd6d4;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.field textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.field-group input:focus {
+  border-color: var(--blue);
+  outline: 3px solid rgba(47, 116, 181, 0.18);
+  outline-offset: 1px;
+}
+
+.field input:user-invalid,
+.field select:user-invalid,
+.field textarea:user-invalid {
+  border-color: #c83f3f;
+}
+
+.field small {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.field-group {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.field-group legend {
+  padding-inline: 4px;
+}
+
+.field-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  color: var(--ink);
+}
+
+.field-group input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  accent-color: var(--accent);
+}
+
+.form-submit {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+@media (min-width: 720px) {
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-submit {
+    width: auto;
+    justify-self: start;
+  }
+}
