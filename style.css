@@ -166,6 +166,10 @@ h3 {
   font-size: clamp(1.05rem, 4vw, 1.28rem);
 }
 
+.phrase {
+  display: inline-block;
+}
+
 .hero-actions {
   display: flex;
   flex-direction: column;
@@ -282,6 +286,8 @@ h3 {
 
 .scan-card p {
   color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.58;
 }
 
 .scan-lines {
