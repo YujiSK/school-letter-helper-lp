@@ -33,7 +33,7 @@
 >    * 体験版URL: https://school-letter-helper-lp.vercel.app/
 > 3. お好みの言語（日本語/英語/ポルトガル語/ベトナム語）を選び、用意した模擬おたよりをスマートフォンのカメラで撮影する（またはキャプチャ画像をアップロードする）などして、要約・ToDo・返信作成機能をお試しください。
 > 4. 操作後、下記アンケート（約3分）にご回答をお願いいたします。
->    * アンケート回答フォーム: [ここにGoogleフォームの共有URLを入力]
+>    * アンケート回答フォーム: https://docs.google.com/forms/d/e/1FAIpQLSf7qEo0OLPk26KPA1YNlOeFQj8ecPsTqWXDsOoq5xpSZ3a04w/viewform
 > 
 > **※個人情報保護に関するご注意※**
 > 今回のテスト版は体験用の模擬データ（遠足のお知らせ）で動いているため、どのような画像をアップロードしてもデモ結果が表示されます。
@@ -55,7 +55,7 @@
 > 3. あなたの すきな ことば（にほんご / えいご / ポルトガルご / ベトナムご）を えらびます。
 > 4. パソコンのがめん の プリントを スマホの カメラで うつすか、がぞうを アップロード（おくる）して、リスト や へんしんの ぶんしょう を つくってみてください。
 > 5. つかったあと、下の アンケート（３分くらい）に こたえてください。
->    * アンケートURL: [ここにGoogleフォームの共有URLを入力]
+>    * アンケートURL: https://docs.google.com/forms/d/e/1FAIpQLSf7qEo0OLPk26KPA1YNlOeFQj8ecPsTqWXDsOoq5xpSZ3a04w/viewform
 > 
 > **※ちゅうい（たいせつな こと）※**
 > なまえ や がっこうの なまえ が かいてある【ほんものの プリント】は ぜったいに アップロード しないで ください。
@@ -78,7 +78,7 @@
 > 3. Escolha o seu idioma de preferência (Japonês / Inglês / Português / Vietnamita).
 > 4. Tire uma foto da amostra na tela do computador com a câmera do seu smartphone (ou envie o arquivo da imagem) para testar os recursos de resumo, lista de tarefas (ToDo) e redação de resposta.
 > 5. Após o uso, responda ao questionário rápido (cerca de 3 minutos) no link abaixo:
->    * URL do questionário: [Insira o URL do Google Forms aqui]
+>    * URL do questionário: https://docs.google.com/forms/d/e/1FAIpQLSf7qEo0OLPk26KPA1YNlOeFQj8ecPsTqWXDsOoq5xpSZ3a04w/viewform
 > 
 > **※Importante sobre Privacidade※**
 > Esta versão de teste funciona com dados simulados (Aviso de Excursão Escolar). Portanto, qualquer imagem enviada mostrará o mesmo resultado de demonstração.
