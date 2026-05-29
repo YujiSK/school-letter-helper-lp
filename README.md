@@ -1,150 +1,115 @@
 # School Letter Helper | 学校プリントをやることリストに変える
 
-外国人保護者向けの学校おたより要約・ToDo化・返信支援サービス「School Letter Helper」のランディングページ（LP）プロジェクトです。
-Cloudflare Pagesでそのまま公開できる、HTML/CSS/JavaScriptのみの静的LPで構築されています。
+外国人保護者向けの学校おたより要約・ToDo化・返信支援サービス「School Letter Helper」のメインアプリケーションおよびランディングページ（LP）の統合プロジェクトです。
 
-## 事業概要
+本プロジェクトは、日本の学校から配られる日本語のプリント（おたより）をスマホで撮影するだけで、AIが「やさしい日本語」と「母語」に要約・翻訳し、必要なタスクを自動抽出してToDoリスト化、さらに連絡用の返信文まで作成するMVP（最小実行可能製品）です。
 
-- **ビジョン**: 「日本の学校プリントが読めない・書けない」という外国人保護者の不安を取り除き、子どもが学校生活で不利益を被るのを防ぐ。
-- **顧客のジョブ (JTBD)**: 
-  - **保護者**: 期限や持ち物を正しく理解し、自力で適切な対応（署名・準備・返信）を完遂したい。
-  - **教職員**: 日本語能力に関わらず、すべての家庭に期限内にお知らせを確実に理解してもらい、催促の負担をなくしたい。
-- **解決策 (MVP機能)**: スマホで撮影した学校プリントから、AIが重要事項（締切・持ち物・ToDo）を自動抽出し、やさしい日本語や母語に要約・翻訳。失礼のない返信文の下書き生成までをサポート。
-- **設計思想**: 個人情報保護を最優先とし、アップロードされた画像やOCRテキストはサーバー側のデータベースやファイルストレージに一切保存せず、ブラウザ（LocalStorage）のみで完結させる「完全プライバシー保護型ステートレス解析」を採用。
+---
 
-## 公開URL
+## 1. プロジェクト概要
 
-https://school-letter-helper-lp.pages.dev/
+*   **ビジョン**: 「日本の学校プリントが読めない・書けない」という外国人保護者の不安を取り除き、子どもが学校生活で忘れ物などの不利益を被るのを防ぐ。
+*   **対象ユーザー**:
+    1.  日本で子どもを育てる外国人保護者（主な対応言語：英語、ポルトガル語、ベトナム語、タガログ語、やさしい日本語）
+    2.  外国人保護者を支援する地域ボランティア、日本語教室スタッフ、NPO関係者
+    3.  外国人保護者とのコミュニケーションコストを下げたい小中学校・幼稚園の教職員
 
-## SEO初期設定
+---
 
-検索エンジン向けに以下のファイルを追加しています。
+## 2. 解決する課題
 
-- `sitemap.xml`
-- `robots.txt`
+1.  **「読めない」の壁**: 時候の挨拶や難しい漢字、学校特有の言葉（集金袋、引き渡し訓練など）が多く、翻訳アプリを通しても「結局、何をするべきか」が分からない。
+2.  **「書けない」の壁**: アレルギー調査や行事の出欠票、連絡帳への返信など、先生に対して失礼のない適切な日本語で返信を書くのが難しい。
+3.  **「見落とし」の壁**: 提出物の締切日や、翌日に必要な持ち物（画用紙や軍手など）に気づくのが遅れ、子どもが忘れ物をしてしまう。
 
-Google Search Consoleに登録する場合は、サイトマップURLとして次を送信してください。
+---
 
-```text
-https://school-letter-helper-lp.pages.dev/sitemap.xml
-```
+## 3. MVP機能 (4つの画面フロー)
 
-## OGP画像
+MVPは、スマートフォンのブラウザで即座に動作するモバイルファーストの4画面で構成されています。
 
-SNSやメッセージアプリで共有したときの表示用に、OGP画像を追加しています。
+1.  **ホーム / アップロード画面**: プリント画像をカメラ撮影またはファイルからアップロードする画面。過去の解析履歴へのアクセスや一括削除も可能。
+2.  **解析中・ローディング画面**: OCRスキャンとLLMによる構造化解析を待つ間の進捗フィードバック画面。
+3.  **ToDo・やさしい日本語確認画面**: 「やさしい日本語 ＆ 翻訳」による3文以内の要約と、チェックリスト化されたToDo（提出期限、持ち物、集金金額等）の確認画面。
+4.  **先生宛て返信文生成画面**: 欠席連絡や参加連絡などの目的に応じて、マナーに適った丁寧な日本語の返信文テンプレートを自動生成・コピーできる画面。
 
-```text
-https://school-letter-helper-lp.pages.dev/ogp.png
-```
+---
 
-`index.html` では以下を設定しています。
+## 4. プライバシー・セキュリティ方針（完全サーバーDBレス）
 
-- `og:image`
-- `og:image:type`
-- `og:image:width`
-- `og:image:height`
-- `twitter:image`
-- `twitter:card`
+外国人保護者に安心して使ってもらうため、極めて厳格なプライバシー設計を採用しています。
 
-編集しやすい元データとして `ogp.svg` も残しています。SNS側のプレビュー互換性を重視するため、公開用メタタグはPNGを参照します。
+*   **ステートレス解析**: アップロード画像および抽出テキストは、当サービスのサーバーDBやファイルストレージには保存しません。OCRおよびLLM解析の瞬間のみ一時的にメモリ上で処理されます。
+*   **完全クライアントサイド保存**: 解析されたデータやToDoの状態は、ユーザーのブラウザの `LocalStorage` にのみ保存されます。
+*   **共有端末への配慮**: 「この端末に履歴を保存しない」設定や、履歴を1クリックで完全抹消する「すべての履歴を削除」機能を備えています。
+*   **ログ出力制限**: サーバーAPIの実行ログに、画像のBase64データ、抽出テキスト、要約、生成された返信文などの個人情報が残るようなログ出力は一切行いません。
 
-## 構成
+---
 
-- `index.html`: 日本語LP、事前登録フォーム、SEO/OGP meta
-- `style.css`: レスポンシブ対応のスタイル
-- `privacy.html`: 簡易プライバシーポリシー
-- `ogp.png`: OGP共有画像
-- `ogp.svg`: OGP共有画像の編集用SVG
-- `sitemap.xml`: 検索エンジン向けサイトマップ
-- `robots.txt`: クロール許可とサイトマップURL
-- `README.md`: デプロイ手順、フォーム仕様
+## 5. 技術スタック
 
-## 公開前に差し替える項目
+*   **フレームワーク / フロントエンド**: Next.js (App Router), Tailwind CSS
+*   **バックエンド / API Routes**: Next.js API Routes (`/api/analyze`)
+*   **外部API**: 
+    *   OCR: Google Cloud Vision API（縦書き日本語の読み取り精度が最も高いため）
+    *   LLM: OpenAI GPT-4o-mini または Gemini 1.5 Flash（高速・低コスト）
+*   **ホスティング**: Vercel または Cloudflare Pages
+*   **クライアントストレージ**: LocalStorage
 
-- `index.html`
-  - `FORMSPREE_ENDPOINT_HERE`
-  - `https://school-letter-helper-lp.pages.dev/`
-  - `https://school-letter-helper-lp.pages.dev/ogp.png`
-- `privacy.html`
-  - `REPLACE_WITH_YOUR_EMAIL`
-  - `https://school-letter-helper-lp.pages.dev/privacy.html`
+---
 
-## Formspree endpoint の差し替え方法
-
-`index.html` のフォームにある次の値を、実際のFormspree endpointに置き換えます。
-
-```html
-<form class="lead-form" action="FORMSPREE_ENDPOINT_HERE" method="POST">
-```
-
-例:
-
-```html
-<form class="lead-form" action="https://formspree.io/f/xxxxxxx" method="POST">
-```
-
-Formspreeに依存しているのは `action` URLだけです。JavaScriptにはFormspree固有処理を入れていません。
-
-## フォーム仕様
-
-| label | name | type | required | allowed values | purpose |
-| --- | --- | --- | --- | --- | --- |
-| あなたの立場 | `role` | select | yes | `parent`, `supporter`, `teacher`, `npo`, `other` | 需要がある利用者層を把握する |
-| 主に使いたい言語 | `language` | select | yes | `portuguese`, `english`, `spanish`, `tagalog`, `vietnamese`, `easy_japanese`, `other` | 対応言語の優先度を決める |
-| 学校プリントや学校連絡で困った経験はありますか？ | `pain_experience` | radio | yes | `often`, `sometimes`, `rarely`, `supporting_others` | 課題の強さと支援者経由の需要を把握する |
-| 一番ほしい機能 | `wanted_feature` | select | yes | `easy_japanese`, `translation`, `todo_extraction`, `reply_template`, `deadline_reminder`, `other` | 初期機能の優先度を決める |
-| テスト版に参加したいですか？ | `beta_interest` | radio | yes | `yes`, `maybe`, `notify_only` | テスト版参加者と通知希望者を分ける |
-| 連絡用メールアドレス | `email` | email | yes | valid email address | テスト版案内、リリース通知、追加ヒアリングに使う |
-| 困っていること・ほしい機能があれば教えてください | `message` | textarea | no | free text | 具体的な困りごとや機能要望を把握する |
-| 送信元 | `source` | hidden | yes | `lp_form` | 送信元を識別する |
-| サービス名 | `service` | hidden | yes | `school_letter_helper` | 複数サービス運用時に識別する |
-| 件名 | `_subject` | hidden | yes | `School Letter Helper 事前登録` | Formspree通知メールの件名に使う |
-| honeypot | `_gotcha` | text hidden by CSS | no | empty | bot送信対策 |
-
-## 将来自前APIへ移行する場合
-
-Cloudflare Workers、Pages Functions、D1などへ移行する場合は、フォームの `action` を差し替えます。
-
-```html
-<form class="lead-form" action="/api/lead" method="POST">
-```
-
-移行時も `name` 属性と `value` は変更しない方針です。既存CSV、Formspree export、D1などへ移すときに項目名を固定しておくことで、データ移行と集計をしやすくします。
-
-## 個人情報入力を避ける方針
-
-このフォームは、子どもの名前、学校名、住所、電話番号、クラス名、出席番号、学校プリント画像などを集めない設計です。
-
-自由記述欄にも、子どもの名前、学校名、住所、電話番号などを書かないよう注意文を表示しています。
-
-## ローカル確認
-
-Pythonが入っている場合:
-
-```powershell
-python -m http.server 8787 --bind 127.0.0.1
-```
-
-ブラウザで開きます。
+## 6. ディレクトリ構成案
 
 ```text
-http://localhost:8787/
+.
+├── app/                      # Next.js App Router (メインアプリ)
+│   ├── layout.tsx            # グローバルレイアウト & SEOメタデータ
+│   ├── page.tsx              # 画面1：ホーム / プリントアップロード
+│   ├── result/
+│   │   └── page.tsx          # 画面3：ToDo・やさしい日本語・翻訳確認
+│   ├── reply/
+│   │   └── page.tsx          # 画面4：先生宛て返信文生成
+│   └── api/
+│       └── analyze/
+│           └── route.ts      # 解析エンドポイント (初期はモック)
+├── components/               # 共通コンポーネント (言語切り替え、モーダル等)
+├── lib/                      # ユーティリティ (LocalStorageヘルパー等)
+├── types/                    # TypeScript型定義
+├── public/                   # 静的アセットおよびLP用静的ファイル
+│   ├── lp/                   # 既存ランディングページ資材 (index.html, style.css 等)
+│   └── ogp.png               # OGP共有画像
+├── package.json              # 依存パッケージ管理
+├── tsconfig.json             # TypeScript設定
+├── tailwind.config.ts        # Tailwind CSS設定
+├── README.md                 # プロジェクト概要・起動手順 (本書)
+└── implementation_plan_school_letter_helper.md # 実装計画書
 ```
 
-## Cloudflare Pagesで公開する手順
+---
 
-1. GitHubにこのリポジトリをpushする
-2. Cloudflareにログインする
-3. `Workers & Pages` を開く
-4. `Create` → `Pages` を選ぶ
-5. GitHubリポジトリを接続する
-6. ビルド設定を次のようにする
+## 7. ローカル起動手順
 
-```text
-Framework preset: None
-Build command: 空欄
-Build output directory: /
+本プロジェクトは Next.js をベースとしています。ローカルでプロトタイプを動作させる手順は以下です。
+
+### 1. 依存関係のインストール
+```bash
+npm install
 ```
 
-7. `Deploy` を押す
-8. `https://<project-name>.pages.dev` で表示を確認する
+### 2. ローカル開発サーバーの起動
+```bash
+npm run dev
+```
+
+起動後、ブラウザで [http://localhost:3000](http://localhost:3000) を開くことでメインアプリケーションが動作します。
+（初期段階では `/api/analyze` はモックAPIとして機能するため、外部APIキーなしで画像のアップロードから結果のシミュレーションまでを体験できます）
+
+---
+
+## 8. 今後の実装ロードマップ
+
+1.  **フェーズ1 (静的UI)**: Next.js + Tailwind CSS による4画面のマークアップとレスポンシブ対応の完了。
+2.  **フェーズ2 (LocalStorage)**: 履歴保存機能、設定変更機能、ToDoチェック状態維持機能の実装。
+3.  **フェーズ3 (APIモック)**: 模擬レスポンスを返す `/api/analyze` を統合し、アップロードから遷移完了までの挙動を検証。
+4.  **フェーズ4 (本番API接続)**: Google Cloud Vision API および LLM APIを接続。
+5.  **フェーズ5 (本番デプロイ)**: クローズドテスト用のホスティング展開。
