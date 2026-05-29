@@ -89,7 +89,7 @@ iPhone (Safari/Chrome) や Android (Chrome) の実機で、以下のモバイル
 VercelへのデプロイおよびGoogleフォーム作成が完了したら、以下の項目を書き換えて検証案内メッセージにそのままコピペして使用してください。
 
 *   **【必須】Vercel プロトタイプ公開URL**: 
-    `https://school-letter-helper.vercel.app/` (※デプロイ完了後のURLに書き換えてください)
+    `https://school-letter-helper-lp.vercel.app/`
 *   **【任意】LP公開URL**: 
     `https://school-letter-helper-lp.pages.dev/`
 *   **【必須】テスト用サンプル画像ダウンロードURL**: 

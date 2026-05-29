@@ -10,7 +10,7 @@
 
 検証期間中に使用するプロトタイプ体験版およびアンケートのURLです。デプロイおよびフォーム作成後に設定します。
 
-*   **プロトタイプ体験版URL**: `https://school-letter-helper.vercel.app/` (※Vercelデプロイ後にURLを更新してください)
+*   **プロトタイプ体験版URL**: `https://school-letter-helper-lp.vercel.app/`
 *   **検証アンケートフォームURL**: `https://docs.google.com/forms/d/e/.../viewform` (※Googleフォーム作成後にURLを更新してください)
 *   **テスト用おたよりサンプル**: [sample_school_letter.md](file:///C:/Users/nk230115/Documents/Codex/2026-05-27/github-plugin-github-openai-curated-2026/sample_school_letter.md)
 

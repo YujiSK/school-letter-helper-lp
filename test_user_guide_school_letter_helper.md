@@ -30,7 +30,7 @@
 > 1. 下記リンクから「テスト用模擬おたより（サンプル）」を開きます。PCの画面に映すか、紙に印刷してカメラ撮影できるように用意します。
 >    * 模擬おたよりテキスト: https://github.com/YujiSK/school-letter-helper-lp/blob/main/sample_school_letter.md
 > 2. 下記の体験版URLを開きます。
->    * 体験版URL: [ここにVercelのデプロイURLを入力]
+>    * 体験版URL: https://school-letter-helper-lp.vercel.app/
 > 3. お好みの言語（日本語/英語/ポルトガル語/ベトナム語）を選び、用意した模擬おたよりをスマートフォンのカメラで撮影する（またはキャプチャ画像をアップロードする）などして、要約・ToDo・返信作成機能をお試しください。
 > 4. 操作後、下記アンケート（約3分）にご回答をお願いいたします。
 >    * アンケート回答フォーム: [ここにGoogleフォームの共有URLを入力]
@@ -51,7 +51,7 @@
 > 1. 下の リンク（URL）から「テスト用の プリント（サンプル）」を ひらきます。パソコンの がめん に だすか、かみ に いんさつ（プリントアウト）してください。
 >    * サンプルのURL: https://github.com/YujiSK/school-letter-helper-lp/blob/main/sample_school_letter.md
 > 2. 下の リンク（URL）を ひらきます。
->    * アプリのURL: [ここにVercelのデプロイURLを入力]
+>    * アプリのURL: https://school-letter-helper-lp.vercel.app/
 > 3. あなたの すきな ことば（にほんご / えいご / ポルトガルご / ベトナムご）を えらびます。
 > 4. パソコンのがめん の プリントを スマホの カメラで うつすか、がぞうを アップロード（おくる）して、リスト や へんしんの ぶんしょう を つくってみてください。
 > 5. つかったあと、下の アンケート（３分くらい）に こたえてください。
@@ -74,7 +74,7 @@
 > 1. Abra o link abaixo para visualizar a folha de informativo escolar de teste (amostra). Deixe-a aberta na tela do seu computador ou imprima-a em papel para poder fotografá-la.
 >    * Link do Informativo de Amostra: https://github.com/YujiSK/school-letter-helper-lp/blob/main/sample_school_letter.md
 > 2. Abra o link do aplicativo de teste abaixo:
->    * URL do aplicativo: [Insira o URL do Vercel aqui]
+>    * URL do aplicativo: https://school-letter-helper-lp.vercel.app/
 > 3. Escolha o seu idioma de preferência (Japonês / Inglês / Português / Vietnamita).
 > 4. Tire uma foto da amostra na tela do computador com a câmera do seu smartphone (ou envie o arquivo da imagem) para testar os recursos de resumo, lista de tarefas (ToDo) e redação de resposta.
 > 5. Após o uso, responda ao questionário rápido (cerca de 3 minutos) no link abaixo:
