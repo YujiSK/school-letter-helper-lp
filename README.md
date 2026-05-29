@@ -6,6 +6,16 @@
 
 ---
 
+## 公開検証URL (体験版)
+
+検証期間中に使用するプロトタイプ体験版およびアンケートのURLです。デプロイおよびフォーム作成後に設定します。
+
+*   **プロトタイプ体験版URL**: `https://school-letter-helper.vercel.app/` (※Vercelデプロイ後にURLを更新してください)
+*   **検証アンケートフォームURL**: `https://docs.google.com/forms/d/e/.../viewform` (※Googleフォーム作成後にURLを更新してください)
+*   **テスト用おたよりサンプル**: [sample_school_letter.md](file:///C:/Users/nk230115/Documents/Codex/2026-05-27/github-plugin-github-openai-curated-2026/sample_school_letter.md)
+
+---
+
 ## 1. プロジェクト概要
 
 *   **ビジョン**: 「日本の学校プリントが読めない・書けない」という外国人保護者の不安を取り除き、子どもが学校生活で忘れ物などの不利益を被るのを防ぐ。
