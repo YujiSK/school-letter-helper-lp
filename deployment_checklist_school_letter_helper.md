@@ -84,15 +84,15 @@ iPhone (Safari/Chrome) や Android (Chrome) の実機で、以下のモバイル
 
 ---
 
-## 6. 検証URL管理シート
+## 6. 検証URL・フォームURL 管理シート
 
-デプロイ完了後、以下の空欄を埋めて関係者に共有してください。
+VercelへのデプロイおよびGoogleフォーム作成が完了したら、以下の項目を書き換えて検証案内メッセージにそのままコピペして使用してください。
 
-*   **プロトタイプ公開URL**: 
-    `https://[あなたのプロジェクト名].vercel.app/`
-*   **LP公開URL**: 
+*   **【必須】Vercel プロトタイプ公開URL**: 
+    `https://school-letter-helper.vercel.app/` (※デプロイ完了後のURLに書き換えてください)
+*   **【任意】LP公開URL**: 
     `https://school-letter-helper-lp.pages.dev/`
-*   **サンプル画像ダウンロードURL**: 
-    `（Googleドライブなどのリンク）`
-*   **Googleフォーム回答URL**: 
-    `https://docs.google.com/forms/d/e/[フォームID]/viewform`
+*   **【必須】テスト用サンプル画像ダウンロードURL**: 
+    `https://(Googleドライブ等の画像直リンクを入力してください)`
+*   **【必須】検証アンケート回答URL**: 
+    `https://docs.google.com/forms/d/e/(Googleフォームの共有URLを入力してください)`
