@@ -139,3 +139,14 @@ npm run dev
 3.  **フェーズ3 (APIモック)**: 模擬レスポンスを返す `/api/analyze` を統合し、アップロードから遷移完了までの挙動を検証。 [済]
 4.  **フェーズ4 (本番API接続)**: Google Cloud Vision API および LLM APIを接続。
 5.  **フェーズ5 (本番デプロイ)**: クローズドテスト用のホスティング展開。
+
+---
+
+## Operational Source of Truth
+
+AI運用・検証ログ・Schedule・プロンプト管理は以下のリポジトリで管理しています。
+
+https://github.com/YujiSK/idea2mvp-ai-ops
+
+このリポジトリはLP本体用です。
+運用ルール、X運用、Search Consoleログ、Formspree確認、Antigravity Scheduleの詳細は `idea2mvp-ai-ops` を参照してください。
